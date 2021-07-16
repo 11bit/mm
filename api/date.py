@@ -27,7 +27,7 @@ def convert():
   p.run()
 
 
-FILEPATH = 'output.ttf'
+FILEPATH = 'api/output.ttf'
 
 class handler(BaseHTTPRequestHandler):
 
