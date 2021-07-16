@@ -5,8 +5,8 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   const testApi = React.useCallback(async () => {
-    const data = await fetch('/api/test');
-    console.log(await data.json())
+    const data = await fetch('/api/date');
+    console.log(await data.text())
   })
 
   return (
