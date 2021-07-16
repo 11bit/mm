@@ -2,7 +2,8 @@ from http.server import BaseHTTPRequestHandler
 from datetime import datetime
 import shutil
 from types import SimpleNamespace
-
+import os
+import sys
 
 FILEPATH = 'api/input.ttf'
 
@@ -13,6 +14,7 @@ class handler(BaseHTTPRequestHandler):
       self.send_response(200)
       self.send_header("Content-Type", 'application/octet-stream')
       self.send_header("Content-Disposition", 'attachment; filename="{}"'.format("output.ttf"))
+      fs = os.fstat(f.fileno())
       self.send_header("Content-Length", str(fs.st_size))
       self.end_headers()
       shutil.copyfileobj(f, self.wfile)
