@@ -1,8 +1,14 @@
+import React from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const testApi = React.useCallback(async () => {
+    const data = await fetch('/api/test');
+    console.log(await data.json())
+  })
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,6 +20,7 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <button onClick={testApi}>Click Me</button>
         </h1>
 
         <p className={styles.description}>
