@@ -4,7 +4,7 @@ import shutil
 from types import SimpleNamespace
 
 
-FILEPATH = 'input.ttf'
+FILEPATH = 'api/input.ttf'
 
 class handler(BaseHTTPRequestHandler):
 
