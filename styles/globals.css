@@ -14,3 +14,8 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+    font-family: 'TestCustomized';
+    src: url('/TestCustomizer-Regular.otf') format('OpenType');
+}
