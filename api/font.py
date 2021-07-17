@@ -35,9 +35,9 @@ class handler(BaseHTTPRequestHandler):
 
 #
     features = ",".join([
-      '"{}" {}'.format(name, val[0])
+      '{}'.format(name)
       for name, val in params.items()
-      if name in AVAILABLE_FEATURES and val in VALUES
+      if name in AVAILABLE_FEATURES and val[0] == "1"
     ])
     print(features)
 
