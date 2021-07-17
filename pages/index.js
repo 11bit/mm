@@ -63,7 +63,7 @@ export default function Home() {
               fontFeatureSettings: settings
             }}
           >
-            0 ->
+            0 -&gt;
           </div>
         </div>
 
