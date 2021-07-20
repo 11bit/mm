@@ -25,7 +25,7 @@ def convert(output, features):
   p = RemapByOTL(SimpleNamespace(**args))
   p.run()
 
-AVAILABLE_FEATURES = ['liga', 'zero']
+AVAILABLE_FEATURES = ['liga', 'zero', 'dlig']
 VALUES = ["0", "1"]
 
 class handler(BaseHTTPRequestHandler):
