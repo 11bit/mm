@@ -7,8 +7,8 @@ import shutil
 from fontTools.ttLib import TTFont
 
 print("Initialize local commands")
-cmd_ttx = local['ttx']
 cmd_rm = local['rm']
+cmd_ttx = local['ttx']
 
 def swap_symbol(src, dst, replacements):
     with open(src, encoding="utf-8") as f:
@@ -45,7 +45,7 @@ def makeFonts(dir, result_file):
 
 class handler(BaseHTTPRequestHandler):
   def do_GET(self):
-    makeFonts('api/fonts/otf', 'public/result')
+    # makeFonts('api/fonts/otf', 'public/result')
     self.send_response(200)
     self.end_headers()
 
