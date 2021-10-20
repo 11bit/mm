@@ -1,3 +1,4 @@
+from http.server import BaseHTTPRequestHandler
 from plumbum import local
 from lxml import etree
 import os
@@ -5,6 +6,7 @@ import tempfile
 import shutil
 from fontTools.ttLib import TTFont
 
+print("Initialize local commands")
 cmd_ttx = local['ttx']
 cmd_rm = local['rm']
 
